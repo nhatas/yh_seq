@@ -5,7 +5,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update --fix-missing && \
   apt-get install -y wget bzip2 build-essential \
   ca-certificates git libglib2.0-0 libxext6 libsm6 \
-  libxrender1 git mercurial nano subversion python3-dev vim && \
+  libxrender1 git mercurial nano subversion python3-dev vim \
+  emacs dos2unix rename && \
   apt-get clean
 
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
